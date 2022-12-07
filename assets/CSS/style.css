@@ -1,0 +1,347 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+:root{
+    --Strong-Cyan: hsl(171, 66%, 44%);
+--Light-Blue: hsl(233, 100%, 69%);
+--Dark-Grayish-Blue: hsl(210, 10%, 33%);
+--Grayish-Blue: hsl(201, 11%, 66%);
+--Light-Grayish-Blue:rgba(159, 171, 178,0.1);
+--font-body:'Bai Jamjuree', sans-serif;
+--white:#fff;
+
+/* Font-weight */
+--w-normal:400;
+--w-bold:600;
+
+/* Gaps */
+--gap-1:2rem;
+--gap-2:3rem;
+--gap-3:4rem;
+--gap-4:5rem;
+
+/* Margin */
+--mb-1:2rem;
+--mb-2:1.5rem;
+--mb-3:3rem;
+--mb-4:4rem;
+--mb-5:5rem;
+--mb-6:6rem;
+
+/* Font size */
+--font-sm:1.5rem;
+--font-sm-1:1.8rem;
+--font-md:2.4rem;
+--font-lg:3rem;
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%; /* 1rem = 10px */
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: var(--font-body);
+    font-size: 1.8rem;
+    background-color: var(--white);
+}
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+ul{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.text-center{
+    text-align: center;
+}
+.container{
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+.bd-grid{
+    display: grid;
+}
+.btn{
+    display: block;
+    padding: 1rem 5rem;
+    text-align: center;
+    color: var(--white);
+    font-size: var(--font-sm);
+    font-weight: var(--w-normal);
+    border-radius: 20px;
+    margin-bottom: var(--mb-1);
+    transition: opacity 0.3s ease-in-out;
+}
+.btn:hover{
+    opacity: 0.7;
+}
+.btn-success{
+    background-color: var(--Strong-Cyan);
+}
+.btn-primary{
+    background-color: var(--Light-Blue);
+}
+.py-lg{
+    padding-top: 10rem;
+}
+.py-md{
+    padding-top: 5rem;
+}
+.py-md-2{
+    padding-top: 7rem;
+}
+[class*="__title"]{
+    font-size: var(--font-md);
+    color: var(--Dark-Grayish-Blue);
+    font-weight: var(--w-bold);
+    margin-bottom: var(--mb-2);
+    text-align: center;
+}
+[class*="__description"]{
+    font-size: var(--font-sm);
+    color: var(--Grayish-Blue);
+    font-weight: var(--w-normal);
+    line-height: 1.5;
+    text-align: center;
+}
+[class*="__logo"]{
+    width: 100px;
+    margin-bottom: var(--mb-1);
+}
+
+/* Header */
+.header{
+    padding-top: 10rem;
+    background-image: url(../images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.header__container{
+ place-items: center;
+ row-gap: var(--gap-2);
+}
+.header__title{
+    font-size: var(--font-lg);
+    margin-bottom: var(--mb-1);
+    font-weight: var(--w-bold);
+}
+
+/* Quick Search */
+.search__img--box{
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom:var(--mb-4);
+}
+.search__content--container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+}
+.search__title{
+    font-size: var(--font-sm-1);
+}
+
+
+/* Clipboard */
+.clipboard__container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-4);
+}
+
+/* Workflow */
+.workflow__boxes{
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: var(--gap-3) ;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-1);
+}
+.box img{
+    width: 30px;
+}
+.box__title{
+    margin-bottom: -0.5rem;
+    font-size: var(--font-sm-1);
+}
+
+/* Partners */
+
+.partners{
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--gap-4);
+}
+.partners img{
+    width: 100px;
+}
+
+/* Availability */
+.available__container{
+    place-items: center;
+    row-gap: var(--gap-2);
+    margin-bottom: var(--mb-6);
+}
+
+/* Footer */
+.footer{
+    background-color: var(--Light-Grayish-Blue) ;
+    padding-bottom: 3rem;
+}
+.footer__container{
+    gap: var(--gap-2);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    flex-direction: column;
+}
+.nav__item {
+    display: grid;
+    margin: 20px 0;
+    font-size: var(--font-sm);
+    color: var(--Dark-Grayish-Blue);
+    transition: color 0.3s; 
+}
+.nav__list a:hover{
+    color: var(--Strong-Cyan);
+}
+.social ul {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-1);
+    /* justify-content: space-between; */
+    color: var(--Grayish-Blue);
+    transition: color 0.3s;
+}
+.icon{
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.social ul li:hover{
+    color: var(--Strong-Cyan);
+}
+
+
+/* Media Queries */
+
+@media (min-width:23em){
+    .header{
+        background-image: url(../images/bg-header-desktop.png);
+    }
+    
+}
+
+@media (min-width:35em){
+    [class*="__logo"]{
+        width: 80px;
+    }
+    .py-lg{
+        padding-top: 7rem;
+    }
+    .search__img--box{
+        width: 300px;
+    }
+    .clipboard__img{
+        width: 375px;
+        margin: 0 auto;
+    }
+    .partners{
+        gap: var(--gap-3);
+        margin-top: var(--mb-5);
+    }
+    .partners img{
+        width: 125px;
+    }
+    
+}
+
+
+@media (min-width:47.25em){
+    [class*="__logo"]{
+        width: 110px;
+    }
+    .header__description, 
+    .snippets__description,
+    .clipboard__description,
+    .available__description{
+        width: 450px;
+        margin: 0 auto;
+
+    }
+    .button{
+        display: flex;
+        gap: var(--gap-1);
+    }
+    .search__container{
+        margin-top: 5rem;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: var(--gap-4);
+    }
+    .search__img--box{
+        width: auto;
+        padding-left: 0;
+        margin-left: -10rem;
+    }
+    .search__title, .search__description{
+        text-align:initial;
+    }
+    .search__content--container{
+        width: 325px;
+        margin-left: 8rem;
+    }
+    .clipboard__img{
+        width: 550px;
+    }
+    .footer__container{
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+    }
+    .footer__logo{
+        width: 50px;
+        justify-self: center;
+        align-self: center;
+    }
+    .nav{
+        justify-self: center;
+    }
+    .nav__list{
+       max-width: 400px;
+    }
+    .nav__item{
+        display: inline-block;
+        margin: 5px 20px;
+    }
+    .social{
+        align-self: center;
+    }
+    .icon{
+        font-size:3rem;
+    }
+    
+}
+
+@media (min-width:75em){
+    :root{
+        --font-sm:1.6rem;
+        --font-sm-1:2rem;
+        --font-md:3rem;
+        --font-lg:4rem;
+    }
+}
